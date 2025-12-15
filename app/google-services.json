@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "944243901350",
+    "project_id": "tiicketbookingapp",
+    "storage_bucket": "tiicketbookingapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944243901350:android:116cc3b5579545a5e08567",
+        "android_client_info": {
+          "package_name": "com.pedrovenda.tiicketbookingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALUQ0tIubIHsB2Jba7MIQvJJKqHNlX64M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
