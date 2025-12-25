@@ -1,5 +1,6 @@
 package com.pedrovenda.tiicketbookingapp.Activities.SearchResult
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -10,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -17,12 +19,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
 import coil.compose.AsyncImage
 import com.pedrovenda.tiicketbookingapp.Activities.Domain.FlightModel
+import com.pedrovenda.tiicketbookingapp.Activities.SeatSelect.SeatSelectActivity
 import com.pedrovenda.tiicketbookingapp.R
 
 @Composable
 fun FlightItem(item: FlightModel, index: Int) {
+    val context = LocalContext.current
 
     ConstraintLayout(
         modifier = Modifier
@@ -32,7 +37,12 @@ fun FlightItem(item: FlightModel, index: Int) {
                 color = colorResource(R.color.lightPurple),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(15.dp)
             )
-            .clickable { }
+            .clickable {
+                val intent = Intent(context, SeatSelectActivity::class.java).apply {
+                    putExtra("flight", item)
+                }
+                startActivity(context, intent, null)
+            }
             .padding(12.dp)
     ) {
 

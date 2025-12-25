@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TIicketBookingApp">
         <activity
+            android:name=".Activities.SeatSelect.SeatSelectActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SearchResult.SearchResultActivity"
             android:exported="false" />
         <activity
