@@ -9,6 +9,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.pedrovenda.tiicketbookingapp.Activities.Domain.FlightModel
 import com.pedrovenda.tiicketbookingapp.Activities.SeatSelect.TicketDetailHeader
@@ -44,9 +45,12 @@ fun TicketDetailScreen(
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 })
-
+                TicketDetailContent(flight = flight, modifier = Modifier.constrainAs(ticketDetail) {
+                    top.linkTo(parent.top, margin = 110.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                })
             }
-
                 GradientButton(onClick = {}, text = "Download Ticket")
 
         }
