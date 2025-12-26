@@ -34,8 +34,7 @@ This project was developed for academic purposes and follows a tutorial-based im
 
 ## 🗂️ Project Structure~
 
-
-```text
+``` 
 com.pedrovenda.ticketbooking
 │
 ├── Activities
@@ -86,6 +85,8 @@ com.pedrovenda.ticketbooking
 │   └── Type.kt
 │
 └── MainActivity.kt
+
+```
 
 
 ## 🧩 Data Model
