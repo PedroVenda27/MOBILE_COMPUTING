@@ -94,7 +94,7 @@ com.pedrovenda.ticketbooking
 The application data is stored in **Firebase Realtime Database** and defined in the JSON file available in this repository:
 
 📄 **Database file:**  
-[`tiicketbookingapp.json`](./tiicketbookingapp.json)
+[`Database_TicketBookingApp.json`](https://github.com/PedroVenda27/MOBILE_COMPUTING/blob/main/FIREBASE/Database_TicketBookingApp.json)
 
 ---
 
