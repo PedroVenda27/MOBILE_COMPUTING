@@ -106,8 +106,9 @@ fun SeatListScreen(
                     .padding(top = 240.dp)
                     .padding(horizontal = 64.dp)
                     .constrainAs(seatGrid) {
-                        top.linkTo(airplane.bottom)
+                        top.linkTo(parent.top)
                         start.linkTo(parent.start)
+                        end.linkTo(parent.end)
                     }
             ) {
                 items(seatList.size) { index ->
