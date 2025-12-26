@@ -1,6 +1,5 @@
-package com.pedrovenda.tiicketbookingapp.Activities.SeatSelect
+package com.pedrovenda.tiicketbookingapp.Activities.TicketDetail
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -9,30 +8,25 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pedrovenda.tiicketbookingapp.Activities.Domain.FlightModel
 import com.pedrovenda.tiicketbookingapp.Activities.Splash.StatusTopBarColor
-import com.pedrovenda.tiicketbookingapp.Activities.TicketDetail.TicketDetailActivity
 import com.pedrovenda.tiicketbookingapp.R
 
-class SeatSelectActivity : AppCompatActivity() {
-    private lateinit var flight: FlightModel
-
+class TicketDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        flight = intent.getSerializableExtra("flight") as FlightModel
+        val flight = intent.getSerializableExtra("flight") as FlightModel
 
         setContent {
             StatusTopBarColor()
-            SeatListScreen(
+
+            TicketDetailScreen(
                 flight = flight,
                 onBackClick = { finish() },
-                onConfirm = { updatedFlight ->
-                    val intent = Intent(this, TicketDetailActivity::class.java).apply {
-                        putExtra("flight", updatedFlight)
-                    }
-                    startActivity(intent)
-                }
+                onDownloadTicketClick = {
+
+                },
             )
+
         }
     }
 }
